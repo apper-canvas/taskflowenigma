@@ -4,7 +4,7 @@ import TasksPage from '@/components/pages/TasksPage';
 import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
-  return (
+return (
     <Router>
       <div className="min-h-screen bg-surface-50">
         <Routes>
@@ -21,8 +21,8 @@ function App() {
           pauseOnFocusLoss
           draggable
           pauseOnHover
-          theme="light"
-          toastClassName="!bg-white !text-surface-900 !rounded-lg !shadow-lg !border !border-surface-200"
+theme="dark"
+          toastClassName="!bg-surface-100 !text-surface-900 !rounded-lg !shadow-lg !border !border-surface-300"
           bodyClassName="!text-surface-800 !font-medium"
           progressClassName="!bg-gradient-to-r !from-primary-500 !to-primary-600"
         />

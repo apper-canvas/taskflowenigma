@@ -72,10 +72,10 @@ const ArchivedTasksModal = ({ isOpen, onClose, onTaskUpdate }) => {
       <motion.div
         initial={{ scale: 0.95, opacity: 0 }}
         animate={{ scale: 1, opacity: 1 }}
-        exit={{ scale: 0.95, opacity: 0 }}
-        className="bg-white rounded-xl shadow-xl max-w-4xl w-full max-h-[80vh] overflow-hidden"
+exit={{ scale: 0.95, opacity: 0 }}
+        className="bg-surface-100 rounded-xl shadow-xl max-w-4xl w-full max-h-[80vh] overflow-hidden"
       >
-        <div className="flex items-center justify-between p-6 border-b border-surface-200">
+        <div className="flex items-center justify-between p-6 border-b border-surface-300">
           <h2 className="text-xl font-display font-bold text-surface-900">
             Archived Tasks
           </h2>
@@ -105,8 +105,8 @@ const ArchivedTasksModal = ({ isOpen, onClose, onTaskUpdate }) => {
                     key={task.Id}
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, y: -20 }}
-                    className="bg-surface-50 rounded-lg border border-surface-200 p-4"
+exit={{ opacity: 0, y: -20 }}
+                    className="bg-surface-200 rounded-lg border border-surface-400 p-4"
                   >
                     <div className="flex items-start justify-between">
                       <div className="flex-1">

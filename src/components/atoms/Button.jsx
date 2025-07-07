@@ -10,9 +10,9 @@ const Button = forwardRef(({
   className,
   ...props 
 }, ref) => {
-  const variants = {
+const variants = {
     primary: 'bg-gradient-to-r from-primary-600 to-primary-700 hover:from-primary-700 hover:to-primary-800 text-white shadow-lg hover:shadow-xl',
-    secondary: 'bg-white hover:bg-surface-50 text-surface-900 border border-surface-200 shadow-sm hover:shadow-md',
+    secondary: 'bg-surface-100 hover:bg-surface-200 text-surface-900 border border-surface-400 shadow-sm hover:shadow-md',
     ghost: 'text-surface-700 hover:text-surface-900 hover:bg-surface-100',
     danger: 'bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 text-white shadow-lg hover:shadow-xl',
     success: 'bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 text-white shadow-lg hover:shadow-xl'
