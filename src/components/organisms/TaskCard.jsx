@@ -1,19 +1,19 @@
-import { useState } from 'react';
-import { motion } from 'framer-motion';
-import { format, isToday, isTomorrow, isPast } from 'date-fns';
-import { cn } from '@/utils/cn';
-import Checkbox from '@/components/atoms/Checkbox';
-import Badge from '@/components/atoms/Badge';
-import Button from '@/components/atoms/Button';
-import ApperIcon from '@/components/ApperIcon';
+import React, { forwardRef, useState } from "react";
+import { motion } from "framer-motion";
+import { format, isPast, isToday, isTomorrow } from "date-fns";
+import { cn } from "@/utils/cn";
+import ApperIcon from "@/components/ApperIcon";
+import Badge from "@/components/atoms/Badge";
+import Button from "@/components/atoms/Button";
+import Checkbox from "@/components/atoms/Checkbox";
 
-const TaskCard = ({ 
+const TaskCard = forwardRef(({ 
   task, 
   onToggleComplete, 
   onEdit, 
   onDelete, 
   onArchive 
-}) => {
+}, ref) => {
   const [isEditing, setIsEditing] = useState(false);
   const [editTitle, setEditTitle] = useState(task.title);
 
@@ -75,8 +75,9 @@ const TaskCard = ({
     }
   };
 
-  return (
+return (
     <motion.div
+      ref={ref}
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: -20 }}
@@ -173,8 +174,8 @@ const TaskCard = ({
           </Button>
         </div>
       </div>
-    </motion.div>
+</motion.div>
   );
-};
+});
 
 export default TaskCard;
